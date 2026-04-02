@@ -151,3 +151,31 @@
 @media (max-width: 600px) {
   .navLocation { display: none; }
 }
+
+.searchOverlay {
+  background: #fff;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.searchOverlayForm {
+  display: flex;
+  gap: 8px;
+}
+
+.searchOverlayInput {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.searchOverlayBtn {
+  padding: 5px 14px;
+  font-size: 18px;
+  background: var(--amazon-orange);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
