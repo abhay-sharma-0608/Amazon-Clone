@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useCart } from '../context/CartContext'
+
 import styles from './Navbar.module.css'
 
 export default function Navbar({ onCartOpen }) {
@@ -32,7 +33,7 @@ export default function Navbar({ onCartOpen }) {
         <div className={styles.navLinks}>
           {/* 🔍 Search */}
           <div className={styles.navLink} onClick={() => setSearchOpen(!searchOpen)}>
-            <span className={styles.big}>🔍</span>
+            <img src="/search-icon.svg" alt="search" className={styles.searchIcon} />
           </div>
 
           {/* 📦 Orders */}
