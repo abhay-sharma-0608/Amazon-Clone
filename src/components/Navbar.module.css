@@ -15,7 +15,9 @@
   gap: 8px;
   padding: 8px 12px;
   flex-direction: row;
-  justify-content: fill;
+  justify-content: flex-start;  /* ← was space-between */
+  flex-wrap: nowrap;
+  min-width: 0;
 }
 
 .logo {
@@ -25,7 +27,15 @@
   color: #fff;
   cursor: pointer;
   white-space: nowrap;
+  display: flex;            /* ← add */
+  align-items: center;      /* ← add */
+  flex-shrink: 0;           /* ← prevents logo from squishing */
+  padding: 4px 8px;         /* ← matches other nav item padding */
+  border: 1px solid transparent;
+  border-radius: 3px;
 }
+
+.logo:hover { border-color: #fff; }   /* ← consistent with other nav items */
 
 .logo span { color: var(--amazon-orange); }
 
@@ -44,7 +54,7 @@
 .locVal { font-size: 13px; font-weight: 700; }
 
 .searchBar {
-  flex: 1;
+  /* flex: 1; */
   display: flex;
   height: 40px;
   border-radius: 4px;
@@ -85,6 +95,8 @@
   align-items: center;
   gap: 4px;
   margin-left: auto;
+  flex-shrink: 0;
+  
 }
 
 .navLink {
@@ -93,10 +105,11 @@
   border: 1px solid transparent;
   border-radius: 3px;
   cursor: pointer;
-  font-size: 13px;
+  font-size: 10px;
   white-space: nowrap;
   display: flex;
   flex-direction: column;
+  
 }
 
 .navLink:hover { border-color: #fff; }
@@ -105,7 +118,7 @@
 .big { font-size: 14px; font-weight: 700; }
 
 .cartIcon {
-  font-size: 24px;
+  font-size: 20px;
   position: relative;
 }
 
@@ -115,7 +128,7 @@
   right: -6px;
   background: var(--amazon-orange);
   color: #131921;
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 900;
   width: 18px;
   height: 18px;
@@ -136,7 +149,7 @@
 
 .nav2Link {
   color: #fff;
-  font-size: 13px;
+  font-size: 11px;
   padding: 6px 8px;
   border: 1px solid transparent;
   border-radius: 3px;
@@ -148,14 +161,30 @@
 
 .nav2LinkOrange {
   color: var(--amazon-orange);
-  font-size: 13px;
+  font-size: 11px;
   padding: 6px 8px;
   cursor: pointer;
   white-space: nowrap;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 740px) {
   .navLocation { display: none; }
+}
+
+@media (max-width: 520px) {
+  .small { font-size: 9px; }
+  .big { font-size: 11px; }
+  .navLink { padding: 4px 5px; }
+  .navLinks { gap: 2px; }
+  .logo { font-size: 17px; }
+}
+
+@media (max-width: 420px) {
+  .small { font-size: 8px; }
+  .big { font-size: 10px; }
+  .navLink { padding: 3px 4px; }
+  .navLinks { gap: 1px; }
+  .logo { font-size: 15px; }
 }
 
 .searchOverlay {
@@ -184,4 +213,8 @@
   border: none;
   border-radius: 4px;
   cursor: pointer;
+}
+
+.spacer {
+  flex: 1;
 }

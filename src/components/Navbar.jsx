@@ -31,6 +31,7 @@ export default function Navbar({ onCartOpen }) {
         </div>
 
         <div className={styles.navLinks}>
+          
           {/* 🔍 Search */}
           <div className={styles.navLink} onClick={() => setSearchOpen(!searchOpen)}>
             <img src="/search-icon.svg" alt="search" className={styles.searchIcon} />
