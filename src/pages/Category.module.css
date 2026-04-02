@@ -1,0 +1,22 @@
+.page { padding: 16px 12px; max-width: 1400px; margin: 0 auto; }
+
+.resultsBar {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 16px;
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.empty { text-align: center; padding: 60px 20px; color: #555; }
+.emptyIcon { font-size: 48px; margin-bottom: 12px; }
+
+@media (max-width: 480px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}

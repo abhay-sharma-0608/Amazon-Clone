@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #eaeded;
+  color: #0f1111;
+}
+
+:root {
+  --amazon-orange: #FF9900;
+  --amazon-dark: #131921;
+  --amazon-nav2: #232f3e;
+  --amazon-blue: #007185;
+  --amazon-btn: #FFD814;
+  --amazon-btn-hover: #F7CA00;
+  --amazon-red: #B12704;
+  --amazon-badge: #CC0C39;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}

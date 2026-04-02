@@ -1,0 +1,44 @@
+.page { padding: 16px 12px; max-width: 1400px; margin: 0 auto; }
+
+.resultsBar {
+  font-size: 14px;
+  color: #555;
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+.filterBar {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.chip {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 4px 14px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.chip:hover { background: var(--amazon-dark); color: #fff; border-color: var(--amazon-dark); }
+.chip.active { background: var(--amazon-dark); color: #fff; border-color: var(--amazon-dark); }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.empty { text-align: center; padding: 60px 20px; color: #555; }
+.emptyIcon { font-size: 48px; margin-bottom: 12px; }
+.emptyTitle { font-size: 18px; font-weight: 600; margin-bottom: 6px; }
+.emptySubtitle { font-size: 14px; color: #888; }
+
+@media (max-width: 480px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}

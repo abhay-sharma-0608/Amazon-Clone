@@ -1,0 +1,153 @@
+.navbar {
+  background: var(--amazon-dark);
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navTop {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: -1px;
+  color: #fff;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.logo span { color: var(--amazon-orange); }
+
+.navLocation {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 4px 8px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+}
+
+.navLocation:hover { border-color: #fff; }
+
+.locLabel { font-size: 11px; color: #ccc; }
+.locVal { font-size: 13px; font-weight: 700; }
+
+.searchBar {
+  flex: 1;
+  display: flex;
+  height: 40px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.searchCategory {
+  background: #f3f3f3;
+  border: none;
+  padding: 0 10px;
+  font-size: 13px;
+  color: #555;
+  border-right: 1px solid #ccc;
+  cursor: pointer;
+  min-width: 60px;
+}
+
+.searchInput {
+  flex: 1;
+  border: none;
+  padding: 0 12px;
+  font-size: 15px;
+  outline: none;
+}
+
+.searchBtn {
+  background: var(--amazon-orange);
+  border: none;
+  padding: 0 14px;
+  font-size: 20px;
+  color: #333;
+}
+
+.searchBtn:hover { background: #e68900; }
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.navLink {
+  color: #fff;
+  padding: 6px 8px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 13px;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+}
+
+.navLink:hover { border-color: #fff; }
+
+.small { font-size: 11px; color: #ccc; }
+.big { font-size: 14px; font-weight: 700; }
+
+.cartIcon {
+  font-size: 24px;
+  position: relative;
+}
+
+.cartCount {
+  position: absolute;
+  top: -8px;
+  right: -6px;
+  background: var(--amazon-orange);
+  color: #131921;
+  font-size: 12px;
+  font-weight: 900;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navBar2 {
+  background: #232f3e;
+  display: flex;
+  align-items: center;
+  padding: 4px 12px;
+  gap: 4px;
+  overflow-x: auto;
+}
+
+.nav2Link {
+  color: #fff;
+  font-size: 13px;
+  padding: 6px 8px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.nav2Link:hover { border-color: #fff; }
+
+.nav2LinkOrange {
+  color: var(--amazon-orange);
+  font-size: 13px;
+  padding: 6px 8px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .navLocation { display: none; }
+}
